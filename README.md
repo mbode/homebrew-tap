@@ -1,5 +1,8 @@
 # mbode Homebrew Tap
 
+## Formulae
+- [terraform-state-mover](https://github.com/mbode/terraform-state-mover)
+
 ## How do I install these formulae?
 `brew install mbode/tap/<formula>`
 
