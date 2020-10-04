@@ -2,16 +2,16 @@
 class TerraformStateMover < Formula
   desc "Refactoring Terraform code has never been easier"
   homepage "https://github.com/mbode/terraform-state-mover"
-  version "0.2.0"
+  version "0.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mbode/terraform-state-mover/releases/download/0.2.0/terraform-state-mover_0.2.0_Darwin_x86_64.tar.gz"
-    sha256 "15b7f67094e073816e2e4e3955f79bd5babc7afb00b22243f551aaaf6a2a3f5e"
+    url "https://github.com/mbode/terraform-state-mover/releases/download/0.3.0/terraform-state-mover_0.3.0_Darwin_x86_64.tar.gz"
+    sha256 "c0274863f7ec4adf77aedcdbc573c95ef7a778fb258743396b4b957168d2b1a7"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/mbode/terraform-state-mover/releases/download/0.2.0/terraform-state-mover_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "94109ea124b1bf8eaa00fd58d498f2f9600705a5572d6b44e10afe9df922fb9c"
+      url "https://github.com/mbode/terraform-state-mover/releases/download/0.3.0/terraform-state-mover_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "05be7b9081af88fb6bcd8d704e2d184abc5ccd9514e47ea5263a353dc33b682c"
     end
   end
 
