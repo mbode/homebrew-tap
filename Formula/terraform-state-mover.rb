@@ -5,29 +5,36 @@
 class TerraformStateMover < Formula
   desc "Refactoring Terraform code has never been easier"
   homepage "https://github.com/mbode/terraform-state-mover"
-  version "0.4.1"
-  bottle :unneeded
+  version "0.4.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mbode/terraform-state-mover/releases/download/0.4.1/terraform-state-mover_0.4.1_Darwin_x86_64.tar.gz"
-      sha256 "75a10329175f736bd2ff7143a965f24f3f069f1a238351dcc0a59aef0c0826b7"
+      url "https://github.com/mbode/terraform-state-mover/releases/download/0.4.2/terraform-state-mover_0.4.2_Darwin_x86_64.tar.gz"
+      sha256 "6ddb279af7670d28f41bae0f9af9cfa607e1f63d1fcbd401eea8312c1fe72517"
+
+      def install
+        bin.install "terraform-state-mover"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mbode/terraform-state-mover/releases/download/0.4.1/terraform-state-mover_0.4.1_Linux_x86_64.tar.gz"
-      sha256 "bd1b19dd7b69f47be2679ef9da7185113708bf4cac4513b24d08199cce8cf589"
+      url "https://github.com/mbode/terraform-state-mover/releases/download/0.4.2/terraform-state-mover_0.4.2_Linux_x86_64.tar.gz"
+      sha256 "215b7f76c2dbe0ef98a821542cf7642d13151ea5ce7fa360a5f4abb6ced92bd6"
+
+      def install
+        bin.install "terraform-state-mover"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mbode/terraform-state-mover/releases/download/0.4.1/terraform-state-mover_0.4.1_Linux_arm64.tar.gz"
-      sha256 "66ee45d34f3a684ed99da4beae2fd280116ac7c8cf8841a48889c803e03196fd"
-    end
-  end
+      url "https://github.com/mbode/terraform-state-mover/releases/download/0.4.2/terraform-state-mover_0.4.2_Linux_arm64.tar.gz"
+      sha256 "27569cc09bc2a3d8ad6bb4263af05a88312b5f44915d36dd9408a35a26980d3e"
 
-  def install
-    bin.install "terraform-state-mover"
+      def install
+        bin.install "terraform-state-mover"
+      end
+    end
   end
 
   test do
