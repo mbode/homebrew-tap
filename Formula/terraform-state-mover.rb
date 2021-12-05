@@ -5,12 +5,20 @@
 class TerraformStateMover < Formula
   desc "Refactoring Terraform code has never been easier"
   homepage "https://github.com/mbode/terraform-state-mover"
-  version "0.4.2"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mbode/terraform-state-mover/releases/download/0.4.2/terraform-state-mover_0.4.2_Darwin_x86_64.tar.gz"
-      sha256 "6ddb279af7670d28f41bae0f9af9cfa607e1f63d1fcbd401eea8312c1fe72517"
+      url "https://github.com/mbode/terraform-state-mover/releases/download/0.5.0/terraform-state-mover_0.5.0_Darwin_x86_64.tar.gz"
+      sha256 "e9b8d7968617c5ea9bd6b187467ae6327d8085cc3d5f598efc8ac53a9b2603af"
+
+      def install
+        bin.install "terraform-state-mover"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/mbode/terraform-state-mover/releases/download/0.5.0/terraform-state-mover_0.5.0_Darwin_arm64.tar.gz"
+      sha256 "21bad9647985cddaf8af2826718029301f0abd00d25bb50a01aa4c25f2371d05"
 
       def install
         bin.install "terraform-state-mover"
@@ -20,16 +28,16 @@ class TerraformStateMover < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mbode/terraform-state-mover/releases/download/0.4.2/terraform-state-mover_0.4.2_Linux_x86_64.tar.gz"
-      sha256 "215b7f76c2dbe0ef98a821542cf7642d13151ea5ce7fa360a5f4abb6ced92bd6"
+      url "https://github.com/mbode/terraform-state-mover/releases/download/0.5.0/terraform-state-mover_0.5.0_Linux_x86_64.tar.gz"
+      sha256 "62b767c8ee6ba066a6fd2d574faf3fddf735fde9512c3c2fb1822a80878ab4dc"
 
       def install
         bin.install "terraform-state-mover"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mbode/terraform-state-mover/releases/download/0.4.2/terraform-state-mover_0.4.2_Linux_arm64.tar.gz"
-      sha256 "27569cc09bc2a3d8ad6bb4263af05a88312b5f44915d36dd9408a35a26980d3e"
+      url "https://github.com/mbode/terraform-state-mover/releases/download/0.5.0/terraform-state-mover_0.5.0_Linux_arm64.tar.gz"
+      sha256 "420ba3d22d5676925f3c654c0e4fded275ccf5f0114a8a37a56ab769f50ea6cc"
 
       def install
         bin.install "terraform-state-mover"
